@@ -3,13 +3,13 @@ Project implemenmted from:
 https://subhrapaladhi.medium.com/using-redis-with-nodejs-and-mongodb-28e5a39a2696
 
 
-# Node-Redis-Mongo app
+# Node-Redis-Mongo app backend only
 This is a node js app for demonstrating how to use redis as cache with node js and mongodb
 
 # Requirements
 - node
 - redis cache
-- mongoDB (local or cloud)
+- mongoDB ( cloud)
 
 # Installation
 ```
@@ -48,4 +48,9 @@ http://localhost:3000/gs
 get all data 
 http://localhost:3000/
 
+#get specific data: based on type or ID
+http://localhost:3000/Liquid/   > Trigger URL for the first time, Data will be fetched from DB, second time on same request
+ data will be fetched from redis cache 
+ 
+http://localhost:3000/Liquid/123
 
